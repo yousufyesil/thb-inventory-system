@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Item</title>
+  <style>
+        :root {
+            --thb-red: #cc0a2f;
+            --thb-black: #000000;
+            --thb-white: #ffffff;
+            --thb-blue: #00bae5;
+            --thb-green: #83bb20;
+            --thb-orange: #f18400;
+            --thb-gray: #f5f5f5;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: var(--thb-gray);
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: var(--thb-white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: var(--thb-red);
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--thb-black);
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            box-sizing: border-box;
+        }
+
+        input[type="text"]:focus,
+        select:focus {
+            outline: none;
+            border-color: var(--thb-red);
+            box-shadow: 0 0 0 2px rgba(204, 10, 47, 0.1);
+        }
+
+        select {
+            background-color: white;
+            cursor: pointer;
+        }
+
+        button[type="submit"] {
+            background-color: var(--thb-red);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.2s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #a8082b;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            input[type="text"],
+            select,
+            button[type="submit"] {
+                font-size: 16px; /* Verhindert Zoom auf iOS */
+            }
+        }
+    </style>
+  <link rel="stylesheet" href="../static/style.css">
+
+</head>
+<body>
+  <form method="post", action="{{url_for('add')}}">
+     <label for="name">Name</label><br>
+     <input type="text" id="name" name="name"><br>
+
+         <label for="name">Anzahl</label><br>
+     <input type="text" id="anzahl" name="anzahl"><br>
+
+         <label for="name">Pakete</label><br>
+     <input type="text" id="paket" name="paket"><br>
+
+         <label for="name">Standort</label><br>
+     <input type="text" id="standort" name="standort"><br>
+
+<label for="fb">Fachbereich</label><br>
+  <select id="fb" name="fb">
+    <option value="FBI">FBI</option>
+    <option value="FBT">FBT</option>
+    <option value="FBW">FBW</option>
+    <option value="HZS">HZS</option>
+  </select>
+    <br>
+<label for="item_type">Kategorie</label><br>
+  <select id="item_type" name="item_type">
+    <option value="B">Broschüre</option>
+    <option value="K">Katalog</option>
+    <option value="I">Item</option>
+  </select>
+    <br>
+    <input type="submit" value="Hinzufügen">
+
+
+  </form>
+</body>
+</html>

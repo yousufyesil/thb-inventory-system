@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Inventar - Hochschulzentrum Studierendenservice</h1>
+<div>
+    <table>
+  <caption>
+    Developed by Yousuf Yesil
+  </caption>
+  <colgroup>
+    <col />
+    <col span="2" class="batman" />
+    <col span="2" class="flash" />
+
+
+  </colgroup>
+  <tr>
+    <td></td>
+    <th scope="col">Name</th>
+    <th scope="col">Anzahl</th>
+    <th scope="col">Pakete</th>
+    <th scope="col">Standort</th>
+    <th scope="col">Fachbereich</th>
+    <th scope="col">Art</th>
+
+
+  </tr>
+    {% for item in items %}
+ <tr>
+    <th scope="row">{{item[0]}}</th>
+    <td>{{item[1]}}</td>
+    <td>{{item[2]}}</td>
+    <td>{{item[3]}}</td>
+    <td>{{item[4]}}</td>
+    <td>{{item[5]}}</td>
+    <td>{{item[6]}}</td>
+  </tr>
+    {% endfor %}
+
+
+</table>
+</div>
+<div>
+    <a href="/add">Add Item</a>
+</div>
+</body>
+</html>
