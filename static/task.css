@@ -1,0 +1,37 @@
+.task_card {
+  border: 1px solid rgb(229 231 235);
+  border-radius: 0.5rem;
+  padding: 0rem 1rem; /* Reduziertes padding oben und unten, seitliches padding bleibt gleich */
+  margin-bottom: 1rem;
+  background-color: var(--thb-white);
+  max-width: 20%;
+  transition: all 0.3s ease-in-out;
+}
+
+.task_name {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+
+.task_card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px); /* Hebt die Karte leicht an */
+
+}
+
+.persons{
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+.task_person {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  margin-right: 2rem;
+}
+.task_date {
+  font-size: 0.875rem;
+  color: var(--thb-gray);
+}
