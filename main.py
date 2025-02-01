@@ -66,3 +66,8 @@ def add():
 
     # GET-Request zeigt das Formular
     return render_template("add.html")
+
+@app.route("/task")
+def task():
+    return render_template("task.html")
+    
